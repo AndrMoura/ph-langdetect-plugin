@@ -1,0 +1,15 @@
+{
+    "name": "Task Language Detect",
+    "url": "https://github.com/AndrMoura/ph-langdetect-plugin",
+    "description": "Get user and agent languages",
+    "main": "index.js",
+    "config": [
+        {
+            "key": "API_SERVER_URL",
+            "name": "HOSTNAME URL",
+            "type": "string",
+            "default": "https://ml-ph-cloudrun-app-qnb6bcsgwa-ey.a.run.app",
+            "required": true
+        }
+    ]
+}
