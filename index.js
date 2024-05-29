@@ -13,8 +13,7 @@ async function makePostRequest(url, data, token) {
       headers: {
         "Content-Type": "application/json",
         "Accept-Encoding": "gzip, deflate, br",
-        "Connection": "keep-alive",
-        "Accept": "*/*"
+        "Connection": "close",
       },
       body: JSON.stringify(data)
     });
