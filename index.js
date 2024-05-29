@@ -87,15 +87,8 @@ async function processEvent(event, { config, cache }) {
     let fullUrl = '';
     let API_SERVER_URL = config.API_SERVER_URL;
 
-    if (isValidURL(API_SERVER_URL)) {
-      const server_url = API_SERVER_URL.endsWith('/')? API_SERVER_URL : API_SERVER_URL + '/';
-      fullUrl = server_url + path;
-    }
-    else
-    {
-      console.error('API_SERVER_URL is not a valid URL');
-      throw new Error('API_SERVER_URL is not a valid URL');
-    }
+    const server_url = API_SERVER_URL.endsWith('/')? API_SERVER_URL : API_SERVER_URL + '/';
+    fullUrl = server_url + path;
     
     if (!event.properties) {
         event.properties = {};
