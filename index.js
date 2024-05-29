@@ -23,6 +23,7 @@ async function makePostRequest(url, data, token) {
       return responseData;
     } else {
       console.error("Request code " + response.status);
+      console.error("msg code", response.statusText);
       throw new Error("Request failed with status code " + response.status);
     }
   } catch (error) {
